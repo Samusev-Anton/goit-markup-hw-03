@@ -37,9 +37,14 @@ p,
 ul{
     margin-top: 0;
     margin-bottom: 0;
+    padding: 0;
 }
 .conteiner {
     width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
 
     background-color: aquamarine;
 }
@@ -75,7 +80,11 @@ ul{
 /*header*/
 .head {
     background: var(--white);
+}
 
+.headline {
+    display: flex;
+    align-items: center;
 }
 .logo {
     color: var(--primary-text-color);
@@ -86,6 +95,15 @@ ul{
     letter-spacing: 0.03em;
 }
 
+.navi {
+    display: flex;
+    padding: 32px 0;
+    margin-left: 93px;
+}
+
+.navi .list+.list {
+ margin-left: 50px;
+}
 
 .navi .link {
     color: var(--primary-text-color);
@@ -102,6 +120,19 @@ ul{
 .navi .link:hover,
 .navi .link:focus {
     color: var(--accent-color);
+}
+
+.contacts {
+    display: flex;
+    padding: 32px 0;
+    margin-left: auto;
+}
+.contacts .list+.list {
+    margin-left: 30px;
+}
+
+.contacts .link+.link {
+    margin-left: 30px;
 }
 
 .contacts .link {
@@ -153,15 +184,22 @@ ul{
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 /*soft skills*/
-.skills .conteiner {
+.skills .list {
     margin-bottom: 186px;
+    display: flex;
+}
+.skill .item {
+    width: 270px;
+}
+
+.skill .item+.item {
+    margin-left: 30px;
 }
 
 .decor {
     background-color: #F5F4FA;
 
     padding: 25px 100px;
-    width: 270px;
     margin-bottom: 30px;
 }
 .skills .title {
@@ -182,20 +220,49 @@ ul{
     letter-spacing: 0.03em;
 }
 /*виды работ*/
-.prodaction .conteiner {
+.prodaction .list {
+    display: flex;
     margin-bottom: 94px;
 }
-/*наша команда*/
-.team {
-    background: #F5F4FA;  
+
+.work .list {
+    justify-content: space-between;
 }
 
+/*
+.prodaction .item+.item {
+    margin-left: 30px;
+}*/
+
+/*наша команда*/
+.team {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background: #F5F4FA;
+}
 .team .list {
+    display: flex;
+
+} 
+.social-network .list {
+    justify-content: space-around;
+    padding: 16px 32px 16px 30px;
+}
+
+.man .list {
+   /* width: 270;*/  
+    justify-content: space-between;  
+}
+
+.team .item {
     background: var(--white);
 
     text-align: center;
-    box-sizing: border-box;
 }
+/*
+.team .item+.item {
+    margin-left: 30px;
+}*/
 .team .title {
     font-family: 'Roboto';
     font-weight: 700;
@@ -203,10 +270,11 @@ ul{
     line-height: 1.17;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 50px;
 }
 .team .foto {
     width: 270px;
-    height: 260px;
+    margin-bottom: 30px;
 }
 
 .team .name {
@@ -216,6 +284,7 @@ ul{
     font-size: 16px;
     line-height: 1.19;
     letter-spacing: 0.03em;
+    margin-bottom: 10px;
 }
 
 .team .position {
@@ -226,13 +295,37 @@ ul{
     line-height: 1.19;
     letter-spacing: 0.03em;
 }
+
+.social-network {
+    background-color: ;
+}
 /*футер*/
 .footer {
+    display: flex;
     background: var(--black-back);
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer .list {
+    display: block;
+    margin-top: 20px;
+}
+
+.acide .skins {
+    display: flex;
+}
+
+.acide .skin+.skin {
+    margin-left: 10px;
 }
 
 .footer .logo {
     color: var(--white);
+}
+
+.footer .item+.item {
+    margin-top: 9px;
 }
 
 .map {
@@ -260,6 +353,19 @@ ul{
 
 .web {
     color: var(--accent-color);
+}
+
+.footer .title {
+    color: var(--white);
+
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.skins-footer {
+    margin-left: 70px;
 }
 /*фильтр*/
 .all {
